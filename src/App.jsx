@@ -1,27 +1,21 @@
-import Heading from './Component/Heading'
-import Icons from './Component/Icons'
-import Card from './Component/Card'
-import Card2 from './Component/Card2'
-import Card3 from './Component/Card3'
-import Card4 from './Component/Card4'
-import Card5 from './Component/Card5'
-import Card6 from './Component/Card6'
-import Card7 from './Component/Card7'
-
+import {
+  createBrowserRouter,
+  createRoutesFromElements,
+  Route,
+  RouterProvider,
+} from "react-router-dom";
+import Home from "./pages/Home";
+import SignUp from "./pages/SignUp";
 
 export default function App() {
-  return (
-    <div>
-      <Heading />
-      <Icons />
-      <Card />
-      <Card2 />
-      <Card3 />
-      <Card4 />
-      <Card5 />
-      <Card6 />
-      <Card7 />
-    </div>
-  )
-}
+  const router = createBrowserRouter(
+    createRoutesFromElements(
+      <Route path="/">
+        <Route index element={<Home />} />
+        <Route path="/sign-up" element={<SignUp />} />
+      </Route>
+    )
+  );
 
+  return <RouterProvider router={router} />;
+}
