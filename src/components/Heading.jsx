@@ -41,9 +41,13 @@ export default function Heading() {
               >
                 Sign Up
               </Link>
-              <button className="bg-slate-300 p-3 w-[13rem] h-[9vh] rounded text-lg  hover:bg-slate-500  ">
-                Search hotels
-              </button>
+
+              <Link
+                className="bg-slate-300 p-3 w-[13rem] h-[9vh] rounded text-lg  hover:bg-slate-500  text-center"
+                to="/log-in"
+              >
+                logIn
+              </Link>
             </div>
           </div>
         </div>
