@@ -6,17 +6,23 @@ export default function Heading() {
       <div className="flex justify-center gap-12 ">
         <div>
           <div className="flex justify-center gap-12 ">
-            <div className="flex gap-3 justify-center mt-5 ml-9">
-              <h1 className="bg-indigo-500 p-2 w-[35px] text-3xl h-[48px] font-bold text-white rounded ">
-                T
-              </h1>
-              <h1 className="font-bold text-4xl  font-sans mt-1 ">Treact</h1>
+          <div className='flex  gap-3 justify-evenly mt-5 items-center'>
+              <h1 className='bg-indigo-500 px-4 py-4 text-xl font-bold text-white rounded-tl-2xl rounded-br-2xl '>Proxi</h1>
+              <h1 className='font-bold text-2xl  font-sans mt-1 '>Proxima </h1>
             </div>
-            <div className="flex justify-center font-sans gap-9 text-[17px] mt-8">
-              <a href="">Home</a>
-              <a href="">Booking</a>
-              <a href="">Contact</a>
-              <a href="">Services</a>
+            <div className="flex justify-center font-sans gap-9 text-[17px] mt-10">
+              <Link to="/">
+              <a href="" className="hover:border-b-4 border-solid border-blue-700">Home</a>
+              </Link>
+             <Link to="/booking" >
+             <a href=""  className="hover:border-b-4 border-solid border-blue-700">Booking</a>
+             </Link>
+             <Link to="/contact">
+             <a href=""  className="hover:border-b-4 border-solid border-blue-700">Contact</a>
+             </Link >
+             <Link to="/services">
+             <a href=""  className="hover:border-b-4 border-solid border-blue-700">Services</a>
+             </Link>
             </div>
           </div>
           <div className="flex-row mt-24">
@@ -43,7 +49,7 @@ export default function Heading() {
               </Link>
 
               <Link
-                className="bg-slate-300 p-3 w-[13rem] h-[9vh] rounded text-lg  hover:bg-slate-500  text-center"
+                className="bg-gray-600 text-white p-3 w-[13rem] h-[9vh] rounded text-lg  hover:bg-slate-500  text-center"
                 to="/log-in"
               >
                 logIn

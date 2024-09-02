@@ -1,6 +1,7 @@
 import { PiLessThan } from "react-icons/pi";
 import { PiGreaterThanLight } from "react-icons/pi";
 import { FaStar } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 function Card() {
   return (
@@ -34,7 +35,10 @@ function Card() {
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum porro dolorum possimus dicta impedit dignissimos laudantium perferendis recusandae quia asperiores fuga in, voluptate illum dolor dolorem ut dolores! Nemo, nobis?
                   </h1>
                  </div>
-                 <button className="bg-indigo-600 p-4 w-[340px] rounded-br-[3rem] text-2xl text-slate-50  hover:bg-indigo-800  ">Book Now</button>
+                <Link to="/booking" >
+                <button className="bg-indigo-600 p-4 w-[340px] rounded-br-[3rem] text-2xl text-slate-50  hover:bg-indigo-800  ">Book Now
+                </button>
+                </Link>
              </div>
 
              <div className="border border-solid border-slate-300 w-[340px] rounded-tl-[2.77rem]  rounded-br-[3rem]">
@@ -55,7 +59,11 @@ function Card() {
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum porro dolorum possimus dicta impedit dignissimos laudantium perferendis recusandae quia asperiores fuga in, voluptate illum dolor dolorem ut dolores! Nemo, nobis?
                   </h1>
                  </div>
-                 <button className="bg-indigo-600 p-4 w-[340px] rounded-br-[3rem] text-2xl text-slate-50 hover:bg-indigo-800 ">Book Now</button>
+                <Link to="/booking">
+                <button className="bg-indigo-600 p-4 w-[340px] rounded-br-[3rem] text-2xl text-slate-50 hover:bg-indigo-800 ">
+                  Book Now
+                </button>
+                </Link>
              </div>
 
              <div className="border border-solid border-slate-300 w-[340px] rounded-tl-[2.77rem]  rounded-br-[3rem]">
@@ -76,7 +84,11 @@ function Card() {
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum porro dolorum possimus dicta impedit dignissimos laudantium perferendis recusandae quia asperiores fuga in, voluptate illum dolor dolorem ut dolores! Nemo, nobis?
                   </h1>
                  </div>
-                 <button className="bg-indigo-600 p-4 w-[340px] rounded-br-[3rem] text-2xl text-slate-50   hover:bg-indigo-800 ">Book Now</button>
+                 <Link to="/booking">
+                 <button className="bg-indigo-600 p-4 w-[340px] rounded-br-[3rem] text-2xl text-slate-50   hover:bg-indigo-800 ">
+                  Book Now
+                 </button>
+                 </Link>
              </div>
 
 

@@ -7,11 +7,11 @@ function Card5() {
        <div className="flex justify-center gap-6 mx-16 my-16">
         <div className=" w-[670px] ">
          <h1 className="font-bold text-4xl">Testimonials</h1>
-         <h1 className="mt-4 text-xl text-slate-300">
+         <h1 className="mt-4 text-xl text-slate-300 ">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem atque laudantium qui inventore quae, corrupti, voluptates, soluta perspiciatis provident totam pariatur iusto? Libero vero cupiditate odio ullam optio dolore alias!
          </h1>
          <FaQuoteLeft className="mt-4 text-3xl text-indigo-600" />
-         <h1 className="mt-3 text-xl">
+         <h1 className="mt-3 text-xl indent-8">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam quisquam iste libero repellendus delectus ullam quas maxime magni. Error perspiciatis quaerat impedit modi consequatur ab atque doloribus libero et laboriosam.
          </h1>
          <FaQuoteRight className="mt-3 text-3xl text-indigo-600" />
