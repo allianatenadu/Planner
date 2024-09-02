@@ -31,7 +31,7 @@ export default function Contact() {
              <textarea placeholder="Type your message here" className="w-[32rem] p-3 h-[16vh] rounded-md border-2 border-solid border-gray-700 outline-none "></textarea>
             </div>
            <div className="flex justify-evenly items-center gap-[4rem]">
-           <button type="submit " className="bg-black text-white text-2xl font-bold w-[20rem] ml-[14rem] h-[9vh] rounded-md hover:bg-blue-600">
+           <button type="submit " className="bg-black text-white text-xl font-bold w-[20rem] ml-[14rem] h-[9vh] rounded-xl hover:bg-light-blue-300">
               Contact Us
             </button>
             <Link to="/">
