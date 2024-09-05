@@ -36,7 +36,7 @@ function Card() {
                   </h1>
                  </div>
                 <Link to="/booking" >
-                <button className="bg-indigo-600 p-4 w-[340px] rounded-br-[3rem] text-2xl text-slate-50  hover:bg-indigo-800  ">Book Now
+                <button className="bg-indigo-600 p-4 w-[340px] rounded-br-[3rem] text-2xl text-slate-50 text-white  hover:bg-indigo-800  ">Book Now
                 </button>
                 </Link>
              </div>
@@ -60,7 +60,7 @@ function Card() {
                   </h1>
                  </div>
                 <Link to="/booking">
-                <button className="bg-indigo-600 p-4 w-[340px] rounded-br-[3rem] text-2xl text-slate-50 hover:bg-indigo-800 ">
+                <button className="bg-indigo-600 p-4 w-[340px] rounded-br-[3rem] text-2xl text-slate-50 text-white hover:bg-indigo-800 ">
                   Book Now
                 </button>
                 </Link>
@@ -85,7 +85,7 @@ function Card() {
                   </h1>
                  </div>
                  <Link to="/booking">
-                 <button className="bg-indigo-600 p-4 w-[340px] rounded-br-[3rem] text-2xl text-slate-50   hover:bg-indigo-800 ">
+                 <button className="bg-indigo-600 p-4 w-[340px] rounded-br-[3rem] text-2xl text-slate-50  text-white hover:bg-indigo-800 ">
                   Book Now
                  </button>
                  </Link>

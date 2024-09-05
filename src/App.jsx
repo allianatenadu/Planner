@@ -10,6 +10,7 @@ import Login from "./pages/Login";
 import Booking from "./pages/Booking";
 import Contact from "./pages/Contact";
 import Services from "./pages/Services";
+import Event from "./pages/Event";
 
 export default function App() {
   const router = createBrowserRouter(
@@ -21,6 +22,7 @@ export default function App() {
         <Route path="/booking" element={<Booking />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/services" element={<Services />} />
+        <Route path="/event" element={<Event />} />
       </Route>
     )
   );
