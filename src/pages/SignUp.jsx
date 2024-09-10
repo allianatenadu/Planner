@@ -36,7 +36,7 @@ const SignUp = () => {
       }}
     >
       <div>
-        <div className=" flex justify-center mx-32   backdrop-blur-md w-[390px] h-[92vh] rounded-xl">
+        <div className=" flex justify-center mx-32   backdrop-blur-md w-[390px] h-[72vh] rounded-xl">
           <div className="flex-col">
             <h1 className="text-4xl font-bold text-white mt-3 text-center">
               Sign Up
@@ -68,7 +68,7 @@ const SignUp = () => {
                   <input
                     type="email"
                     placeholder="Email here"
-                    className="bg-transparent outline-none  text-white placeholder:text-black"
+                    className="bg-transparent outline-none  text-white "
                     {...register("email", { required: true })}
                   />
                 </div>

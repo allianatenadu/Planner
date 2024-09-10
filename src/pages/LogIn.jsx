@@ -31,7 +31,7 @@ function Login() {
       className="bg-cover bg-center bg-no-repeat min-h-screen flex justify-center  items-center w-screen"
       style={{
         backgroundImage:
-          'url("https://images.pexels.com/photos/27590769/pexels-photo-27590769/free-photo-of-a-window-in-a-green-ivy-covered-building.jpeg")',
+          'url("https://images.pexels.com/photos/27468751/pexels-photo-27468751/free-photo-of-a-blue-ocean-with-a-rocky-cliff-in-the-background.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load")',
       }}
     >
       <div className="text-black flex justify-center">
@@ -91,9 +91,11 @@ function Login() {
                   />
                   <h2 className="text-white">Done with it</h2>
                 </div>
-                <a href="" className="mt-1 text-white">
+              <Link to="/sign-up">
+              <a href="" className="mt-1 text-white">
                   Forget Password
                 </a>
+              </Link>
               </div>
             </div>
           </div>

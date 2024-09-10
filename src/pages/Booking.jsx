@@ -31,9 +31,14 @@ export default function Booking() {
                 </Link>
             </nav>
          </div>
-           <div className='absolute top-[10rem] left-[23rem] '>
-           <h1 className='text-white text-4xl font-serif tracking-normal font-bold inline `' >Welcome guest, Please can we help you</h1>
-           </div>
+         <div className="flex justify-center ">
+         <div className="flex-col text-white absolute left-[25rem] top-36">
+          <h1 className='text-5xl font-bold'>Proxima Event Planner</h1>
+                  <h1 className='text-2xl mt-3 min-h-2'>
+                    Book your event with us and make it memorable,<br /> we are here to make your event memorable.
+                  </h1>
+          </div>
+         </div>
         </div>
         <div className='mx-20 mt-14'>
   <Carousel
