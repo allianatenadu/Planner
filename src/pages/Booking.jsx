@@ -15,19 +15,16 @@ export default function Booking() {
          <div className='text-white text-xl mt-4'>
             <nav className='flex flex-wrap gap-8'>
                <Link to="/">
-               <a href="" className='hover:border-b-4 border-indigo-900 font-bold'>Home</a>
+               <a href="" className='border-b-4 border-indigo-600 pb-2 border-opacity-0 hover:border-opacity-100 transition-all duration-300 ease-in-out'>Home</a>
                </Link>
                 <Link to="/booking">
-                <a href="" className='hover:border-b-4 border-indigo-900 font-bold'>Booking</a>
+                <a href="" className='border-b-4 border-indigo-600 pb-2 border-opacity-0 hover:border-opacity-100 transition-all duration-300 ease-in-out'>Booking</a>
                 </Link>
                 <Link to="/contact">
-                <a href="" className='hover:border-b-4 border-indigo-900 font-bold'>Contact</a>
+                <a href="" className='border-b-4 border-indigo-600 pb-2 border-opacity-0 hover:border-opacity-100 transition-all duration-300 ease-in-out'>Contact</a>
                 </Link>
                 <Link to="/event">
-                <a href="" className='hover:border-b-4 border-indigo-900 font-bold'>Event</a>
-                </Link>
-                <Link to="/services">
-                <a href="" className='hover:border-b-4 border-indigo-900 font-bold'>Services</a>
+                <a href="" className='border-b-4 border-indigo-600 pb-2 border-opacity-0 hover:border-opacity-100 transition-all duration-300 ease-in-out'>Event</a>
                 </Link>
             </nav>
          </div>
@@ -334,7 +331,6 @@ export default function Booking() {
               <Link to="/event">
              <a href=""  className="hover:border-b-4 border-solid border-blue-700">Event</a>
              </Link >
-              <Link to="/services"><a href="">services</a></Link>
             </div>  
             <div className="flex justify-center gap-12 mt-10">
               <div>

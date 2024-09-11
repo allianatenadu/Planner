@@ -143,8 +143,8 @@ export default function Event() {
             </div>
             <div className=' mt-5 flex justify-center'>
               <img src="https://images.pexels.com/photos/6170755/pexels-photo-6170755.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt=""
-              className='w-[100%] h-[60vh] absolute ' />
-              <div className='relative top-[3.22rem] left-[30px] bg-white w-[400px] h-[40vh]  p-5  rounded-md shadow-lg shadow-black/30'>
+              className='w-[100%] h-[80vh] absolute ' />
+              <div className='relative top-[9.22rem] left-[22px] bg-white w-[400px] h-[40vh]  p-5  rounded-md shadow-lg shadow-black/30'>
               <h1 className='text-3xl font-bold text-center '>
                   Harry Up !
                 </h1>
@@ -161,7 +161,7 @@ export default function Event() {
                  </div>
               </div>
             </div>
-            <div className='mt-[16rem]'>
+            <div className='mt-[19rem]'>
               <h1 className='text-center text-4xl font-serif font-bold'>Book for hotels</h1>
             <div className='flex flex-wrap gap-10 justify-center mt-10'>
                 <div className='shadow-lg shadow-slate-400  w-[340px] h-[300px] rounded-xl hover:scale-105 duration-300 flex  justify-center'>

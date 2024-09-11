@@ -34,7 +34,7 @@ export default function Heading() {
               <Link to="/">
                 <a
                   href=""
-                  className="border-b-2 border-blue-500 pb-2 border-opacity-0 hover:border-opacity-100 transition-all duration-300 ease-in-out"
+                  className="border-b-4 border-blue-500 pb-2 border-opacity-0 hover:border-opacity-100 transition-all duration-300 ease-in-out"
                 >
                   Home
                 </a>
@@ -42,7 +42,7 @@ export default function Heading() {
               <Link to="/booking">
                 <a
                   href=""
-                  className="border-b-2 border-blue-500 pb-2 border-opacity-0 hover:border-opacity-100 transition-all duration-300 ease-in-out"
+                  className="border-b-4 border-blue-500 pb-2 border-opacity-0 hover:border-opacity-100 transition-all duration-300 ease-in-out"
                 >
                   Booking
                 </a>
@@ -50,7 +50,7 @@ export default function Heading() {
               <Link to="/contact">
                 <a
                   href=""
-                  className="border-b-2 border-blue-500 pb-2 border-opacity-0 hover:border-opacity-100 transition-all duration-300 ease-in-out"
+                  className="border-b-4 border-blue-500 pb-2 border-opacity-0 hover:border-opacity-100 transition-all duration-300 ease-in-out"
                 >
                   Contact
                 </a>
@@ -58,18 +58,9 @@ export default function Heading() {
               <Link to="/event">
                 <a
                   href=""
-                  className="border-b-2 border-blue-500 pb-2 border-opacity-0 hover:border-opacity-100 transition-all duration-300 ease-in-out"
+                  className="border-b-4 border-blue-500 pb-2 border-opacity-0 hover:border-opacity-100 transition-all duration-300 ease-in-out"
                 >
-                  Contact
-                </a>
-              </Link>
-
-              <Link to="/services">
-                <a
-                  href=""
-                  className="border-b-2 border-blue-500 pb-2 border-opacity-0 hover:border-opacity-100 transition-all duration-300 ease-in-out"
-                >
-                  Services
+                  Event
                 </a>
               </Link>
             </div>

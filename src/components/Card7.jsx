@@ -19,7 +19,6 @@ function Card7() {
                 <Link to="/event">
                <a href=""  className="hover:border-b-4 border-solid border-blue-700">Event</a>
                </Link >
-                <Link to="/services"><a href="">services</a></Link>
               </div>  
               <div className="flex justify-center gap-12 mt-10">
                 <div>
