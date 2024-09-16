@@ -1,15 +1,135 @@
 import { FaFacebookF } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { CiYoutube } from "react-icons/ci";
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { Carousel } from "@material-tailwind/react";
+import { Carousel, Input } from "@material-tailwind/react";
  
 
 export default function Booking() {
+
+  const hotels = [
+    {
+      name: "c",
+      location: "Location 1",
+      price: "$100",
+      image: "https://cf.bstatic.com/xdata/images/hotel/square600/284019694.webp?k=d67d819e299e2f164ea9d24f632c8cf28d0eb64af9b238c2b06ea35d8cc291b3&o="
+    },
+    {
+      name: " c",
+      location: "Trasacco",
+      price: "$400",
+      image: "https://images.pexels.com/photos/186077/pexels-photo-186077.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+      name: "C",
+      location: "Location 1",
+      price: "$100",
+      image: "https://images.pexels.com/photos/16534745/pexels-photo-16534745/free-photo-of-pavilions-on-gadisar-lake.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    },
+    {
+      name: "C",
+      location: "Location 1",
+      price: "$100",
+      image: "https://images.pexels.com/photos/16534745/pexels-photo-16534745/free-photo-of-pavilions-on-gadisar-lake.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    },
+    {
+      name: "C",
+      location: "Location 1",
+      price: "$100",
+      image: "https://images.pexels.com/photos/16534745/pexels-photo-16534745/free-photo-of-pavilions-on-gadisar-lake.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      Details:""
+    },
+    {
+      name: "C",
+      location: "Location 1",
+      price: "$100",
+      image: "https://images.pexels.com/photos/16534745/pexels-photo-16534745/free-photo-of-pavilions-on-gadisar-lake.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    },
+  ]
+
+  const [search,setSearch] = useState("")
+
+  const handleSearch=(e)=>{
+    e.preventDefault()
+
+    setSearch(e.target.value)
+  }
+
+  const filteredHotels = hotels.filter((hotel) =>{
+    return hotel.name.toLowerCase().includes(search.toLowerCase())
+  })
+
+
+  //  for Tourism 
+    const  Tourism=[
+       {
+        Name:"",
+        Location:"Mount Afadjato",
+        Price:"$50",
+        Image:"https://visitghana.com/wp-content/uploads/2019/02/2703_Mt.-Afajato.jpg",
+        Details:"Book"
+       },
+       {
+        Name:"",
+        Location:"Larabanga mosque",
+        Price:"$50",
+        Image:"https://mosqpedia.org/img/cache/largeimage/nyuLkvCn5SBFJKhDYx1X6D2isUyb6LiAFKek3yTZ",
+        Details:"Book"
+       },
+       {
+        Name:"",
+        Location:"Elmina Castle",
+        Price:"$50",
+        Image:"https://149357548.v2.pressablecdn.com/wp-content/uploads/2011/10/elmina.jpg",
+        Details:"Book"
+       },
+       {
+        Name:"Kamkum National park",
+        Location:"Adomi bridge",
+        Price:"$50",
+        Image:"https://civilengineeringgh.wordpress.com/wp-content/uploads/2015/12/screenshot-9.png",
+        Details:"Book"
+       },
+       {
+        Name:"Boti Fall",
+        Location:"London",
+        Price:"$50",
+        Image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxefz5kW9mbiw6s2PLbVGNVSdnBNiBGBZlA1hhMfNibwmXFKwd",
+        Details:"Book"
+       },
+       
+       {
+        Name:"Kamkum National park",
+        Location:"London",
+        Price:"$50",
+        Image:"https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/a8/38/72/caption.jpg?w=300&h=300&s=1",
+        Details:"Book"
+       },       
+    ]
+//People who  like our Event Planner 
+
+    const People=[
+      {
+   Name:"Merriam",
+   detail:"This web app is Good and I like it  ",
+   image:"https://images.pexels.com/photos/3992656/pexels-photo-3992656.png"
+      },
+      {
+        Name:"John wick",
+        detail:"This web app is Good and I like it  ",
+        image:"https://img.freepik.com/premium-photo/man-wearing-glasses-sits-chair-with-shirt-that-says-he-is-smiling_995407-128970.jpg?size=626&ext=jpg&ga=GA1.2.610418126.1724349891&semt=ais_hybrid"
+           },
+           {
+            Name:"Merriam",
+            detail:"This web app is Good and I like it  ",
+            image:"https://images.pexels.com/photos/3992656/pexels-photo-3992656.png"
+               },
+    ]
+
   return (
-    <div>
-        <div className='bg-cover bg-center bg-no-repeat h-[70vh] flex justify-center  w-[100%]' style={{
+    <div >
+        <div className='bg-cover bg-center bg-no-repeat bg-[url("")] h-[70vh] flex justify-center  w-[100%]' style={{
         backgroundImage: 'url("https://images.pexels.com/photos/16534745/pexels-photo-16534745/free-photo-of-pavilions-on-gadisar-lake.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2")',
       }}>
          <div className='text-white text-xl mt-4'>
@@ -71,252 +191,113 @@ export default function Booking() {
       />
     </Carousel>
   </div>
-         <div className='mt-10'>
-            <h1 className='text-center text-3xl tracking-normal  font-serif font-bold'>Here are some places for you to book Now </h1>
-            <div className='flex flex-wrap gap-10 justify-center mt-10'>
-                <div className='shadow-lg shadow-slate-400  w-[340px] h-[300px] rounded-xl hover:scale-105 duration-300 flex  justify-center'>
-                <div className='flex-col'>
-                      <div>
-                       <img src="https://pix10.agoda.net/hotelImages/1197777/-1/245605c91c82de6a73b70e04881c71f1.jpg?ca=20&ce=0&s=414x232&ar=16x9" alt=""   className='w-[240px] h-[30vh] mt-7 rounded-xl'/>
-                      </div>
-                       <div className='flex justify-between mt-3'>
-                         <h1 className=' text-xl font-bold'>Vicky Hotel</h1>
-                         <h1 className=' text-xl font-bold order-1'> $50</h1>
-                        </div>
-                        <div className='flex justify-center mt-2'>
-                            <button className='bg-indigo-600 text-white px-10 py-2 rounded-xl hover:bg-sky-700'>
-                                Book Now
-                            </button>
-                        </div>
-                      </div>
-                </div>
-                <div className='shadow-lg shadow-slate-400  w-[340px] h-[300px] rounded-xl hover:scale-105 duration-300 flex  justify-center'>
-                <div className='flex-col'>
-                      <div>
-                       <img src="https://ik.imgkit.net/3vlqs5axxjf/external/ik-seo/http://media.iceportal.com/47530/photos/3764856_XL/Best-Western-Premier-Accra-Airport-Hotel-Other.jpg?tr=w-780%2Ch-437%2Cfo-auto" alt=""   className='w-[240px] h-[30vh] mt-7 rounded-xl'/>
-                      </div>
-                       <div className='flex justify-between mt-3'>
-                         <h1 className=' text-xl font-bold'>Vicky Hotel</h1>
-                         <h1 className=' text-xl font-bold order-1'> $50</h1>
-                        </div>
-                        <div className='flex justify-center mt-2'>
-                            <button className='bg-indigo-600 text-white px-10 py-2 rounded-xl hover:bg-sky-700'>
-                                Book Now
-                            </button>
-                        </div>
-                      </div>
-                </div>
-                <div className='shadow-lg shadow-slate-400  w-[340px] h-[300px] rounded-xl hover:scale-105 duration-300  flex  justify-center'>
-                      <div className='flex-col'>
-                      <div>
-                       <img src="https://ghanatalksbusiness.com/wp-content/uploads/2018/09/lome-hotel-ibis.jpg" alt=""   className='w-[240px] h-[30vh] mt-7 rounded-xl'/>
-                      </div>
-                       <div className='flex justify-between mt-3'>
-                         <h1 className=' text-xl font-bold'>Vicky Hotel</h1>
-                         <h1 className=' text-xl font-bold order-1'> $50</h1>
-                        </div>
-                        <div className='flex justify-center mt-2'>
-                            <button className='bg-indigo-600 text-white px-10 py-2 rounded-xl hover:bg-sky-700'>
-                                Book Now
-                            </button>
-                        </div>
-                      </div>
-                </div>
-                <div className='shadow-lg shadow-slate-400 w-[340px] h-[300px] rounded-xl hover:scale-105 duration-300 flex  justify-center'>
-                <div className='flex-col'>
-                      <div>
-                       <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/de/dd/22/photo2jpg.jpg?w=1200&h=-1&s=1" alt=""   className='w-[240px] h-[30vh] mt-7 rounded-xl'/>
-                      </div>
-                       <div className='flex justify-between mt-3'>
-                         <h1 className=' text-xl font-bold'>Vicky Hotel</h1>
-                         <h1 className=' text-xl font-bold order-1'> $50</h1>
-                        </div>
-                        <div className='flex justify-center mt-2'>
-                            <button className='bg-indigo-600 text-white px-10 py-2 rounded-xl hover:bg-sky-700'>
-                                Book Now
-                            </button>
-                        </div>
-                      </div>
-                </div>
-                <div className='shadow-lg shadow-slate-400  w-[340px] h-[300px] rounded-xl hover:scale-105 duration-300 flex  justify-center'>
-                <div className='flex-col'>
-                      <div>
-                       <img src="https://royal-nick-hotel-accra-gh.booked.net/data/Photos/OriginalPhoto/1112/111260/111260457/Royal-Nick-Hotel-Accra-Exterior.JPEG" alt=""   className='w-[240px] h-[30vh] mt-7 rounded-xl'/>
-                      </div>
-                       <div className='flex justify-between mt-3'>
-                         <h1 className=' text-xl font-bold'>Vicky Hotel</h1>
-                         <h1 className=' text-xl font-bold order-1'> $50</h1>
-                        </div>
-                        <div className='flex justify-center mt-2'>
-                            <button className='bg-indigo-600 text-white px-10 py-2 rounded-xl hover:bg-sky-700'>
-                                Book Now
-                            </button>
-                        </div>
-                      </div>
-                </div>
-                <div className='shadow-lg shadow-slate-400  w-[340px] h-[300px] rounded-xl hover:scale-105 duration-300 flex  justify-center'>
-                <div className='flex-col'>
-                      <div>
-                       <img src="https://media-cdn.tripadvisor.com/media/photo-s/23/10/a6/ae/our-inviting-pool.jpg" alt=""   className='w-[240px] h-[30vh] mt-7 rounded-xl'/>
-                      </div>
-                       <div className='flex justify-between mt-3'>
-                         <h1 className=' text-xl font-bold'>Vicky Hotel</h1>
-                         <h1 className=' text-xl font-bold order-1'> $50</h1>
-                        </div>
-                        <div className='flex justify-center mt-2'>
-                            <button className='bg-indigo-600 text-white px-10 py-2 rounded-xl hover:bg-sky-700'>
-                                Book Now
-                            </button>
-                        </div>
-                      </div>
-                </div>
-                <div className='shadow-lg shadow-slate-400 w-[340px] h-[300px] rounded-xl hover:scale-105 duration-300 flex  justify-center'>
-                <div className='flex-col'>
-                      <div>
-                       <img src="https://bestwesternplusaccra.com/client-assets/img/bwp-4.jpg" alt=""   className='w-[240px] h-[30vh] mt-7 rounded-xl'/>
-                      </div>
-                       <div className='flex justify-between mt-3'>
-                         <h1 className=' text-xl font-bold'>Vicky Hotel</h1>
-                         <h1 className=' text-xl font-bold order-1'> $50</h1>
-                        </div>
-                        <div className='flex justify-center mt-2'>
-                            <button className='bg-indigo-600 text-white px-10 py-2 rounded-xl hover:bg-sky-700'>
-                                Book Now
-                            </button>
-                        </div>
-                      </div>
-                </div>
-                <div className='shadow-lg shadow-slate-400  w-[340px] h-[300px] rounded-xl hover:scale-105 duration-300 flex  justify-center'>
-                <div className='flex-col'>
-                      <div>
-                       <img src="https://cdn.yen.com.gh/images/1120/3o3bpd6hfe1socoeh.jpeg?v=1" alt=""   className='w-[240px] h-[30vh] mt-7 rounded-xl'/>
-                      </div>
-                       <div className='flex justify-between mt-3'>
-                         <h1 className=' text-xl font-bold'>Vicky Hotel</h1>
-                         <h1 className=' text-xl font-bold order-1'> $50</h1>
-                        </div>
-                        <div className='flex justify-center mt-2'>
-                            <button className='bg-indigo-600 text-white px-10 py-2 rounded-xl hover:bg-sky-700'>
-                                Book Now
-                            </button>
-                        </div>
-                      </div>
-                </div>
-                <div className='shadow-lg shadow-slate-400  w-[340px] h-[300px] rounded-xl hover:scale-105 duration-300 flex  justify-center'>
-                <div className='flex-col'>
-                      <div>
-                       <img src="https://images.trvl-media.com/lodging/98000000/97010000/97006400/97006372/a910413f_z.jpg" alt=""   className='w-[240px] h-[30vh] mt-7 rounded-xl'/>
-                      </div>
-                       <div className='flex justify-between mt-3'>
-                         <h1 className=' text-xl font-bold'>Vicky Hotel</h1>
-                         <h1 className=' text-xl font-bold order-1'> $50</h1>
-                        </div>
-                        <div className='flex justify-center mt-2'>
-                            <button className='bg-indigo-600 text-white px-10 py-2 rounded-xl hover:bg-sky-700'>
-                                Book Now
-                            </button>
-                        </div>
-                      </div>
-                </div>
-                <div className='shadow-lg shadow-slate-400  w-[340px] h-[300px] rounded-xl hover:scale-105 duration-300 flex  justify-center'>
-                <div className='flex-col'>
-                      <div>
-                       <img src="https://ik.imgkit.net/3vlqs5axxjf/external/ik-seo/https://www.cfmedia.vfmleonardo.com/imageRepo/7/0/133/455/712/Accra-City-Hotel_O/Accra-City-Hotel-Exterior.jpg?tr=w-780%2Ch-437%2Cfo-auto" alt=""   className='w-[240px] h-[30vh] mt-7 rounded-xl'/>
-                      </div>
-                       <div className='flex justify-between mt-3'>
-                         <h1 className=' text-xl font-bold'>Vicky Hotel</h1>
-                         <h1 className=' text-xl font-bold order-1'> $50</h1>
-                        </div>
-                        <div className='flex justify-center mt-2'>
-                            <button className='bg-indigo-600 text-white px-10 py-2 rounded-xl hover:bg-sky-700'>
-                                Book Now
-                            </button>
-                        </div>
-                      </div>
-                </div>
-                <div className='shadow-lg shadow-slate-400  w-[340px] h-[300px] rounded-xl hover:scale-105 duration-300 flex  justify-center'>
-                <div className='flex-col'>
-                      <div>
-                       <img src="https://hotels.ghlisting.com/wp-content/uploads/2017/11/Pool-Area.jpg" alt=""   className='w-[240px] h-[30vh] mt-7 rounded-xl'/>
-                      </div>
-                       <div className='flex justify-between mt-3'>
-                         <h1 className=' text-xl font-bold'>Vicky Hotel</h1>
-                         <h1 className=' text-xl font-bold order-1'> $50</h1>
-                        </div>
-                        <div className='flex justify-center mt-2'>
-                            <button className='bg-indigo-600 text-white px-10 py-2 rounded-xl hover:bg-sky-700'>
-                                Book Now
-                            </button>
-                        </div>
-                      </div>
-                </div>
-                <div className='shadow-lg shadow-slate-400  w-[340px] h-[300px] rounded-xl hover:scale-105 duration-300 flex  justify-center'>
-                <div className='flex-col'>
-                      <div>
-                       <img src="https://q-xx.bstatic.com/xdata/images/hotel/max500/449473353.jpg?k=b699573120779c36dd2f8ef865757d159affaa859e232621f732a792ea50b332&o=" alt=""   className='w-[240px] h-[30vh] mt-7 rounded-xl'/>
-                      </div>
-                       <div className='flex justify-between mt-3'>
-                         <h1 className=' text-xl font-bold'>Vicky Hotel</h1>
-                         <h1 className=' text-xl font-bold order-1'> $50</h1>
-                        </div>
-                        <div className='flex justify-center mt-2'>
-                            <button className='bg-indigo-600 text-white px-10 py-2 rounded-xl hover:bg-sky-700'>
-                                Book Now
-                            </button>
-                        </div>
-                      </div>
-                </div>
-                <div className='shadow-lg shadow-slate-400  w-[340px] h-[300px] rounded-xl hover:scale-105 duration-300 flex  justify-center'>
-                <div className='flex-col'>
-                      <div>
-                       <img src="https://mensvic-grand-hotel-accra.booked.net/data/Photos/OriginalPhoto/1360/136068/136068243/Mensvic-Grand-Hotel-Accra-Exterior.JPEG" alt=""   className='w-[240px] h-[30vh] mt-7 rounded-xl'/>
-                      </div>
-                       <div className='flex justify-between mt-3'>
-                         <h1 className=' text-xl font-bold'>Vicky Hotel</h1>
-                         <h1 className=' text-xl font-bold order-1'> $50</h1>
-                        </div>
-                        <div className='flex justify-center mt-2'>
-                            <button className='bg-indigo-600 text-white px-10 py-2 rounded-xl hover:bg-sky-700'>
-                                Book Now
-                            </button>
-                        </div>
-                      </div>
-                </div>
-                <div className='shadow-lg shadow-slate-400  w-[340px] h-[300px] rounded-xl hover:scale-105 duration-300 flex  justify-center'>
-                <div className='flex-col'>
-                      <div>
-                       <img src="https://content.skyscnr.com/available/1594931092/1594931092_WxH.jpg" alt=""   className='w-[240px] h-[30vh] mt-7 rounded-xl'/>
-                      </div>
-                       <div className='flex justify-between mt-3'>
-                         <h1 className=' text-xl font-bold'>Vicky Hotel</h1>
-                         <h1 className=' text-xl font-bold order-1'> $50</h1>
-                        </div>
-                        <div className='flex justify-center mt-2'>
-                            <button className='bg-indigo-600 text-white px-10 py-2 rounded-xl hover:bg-sky-700'>
-                                Book Now
-                            </button>
-                        </div>
-                      </div>
-                </div>
-                <div className='shadow-lg shadow-slate-400  w-[340px] h-[300px] rounded-xl hover:scale-105 duration-300 flex  justify-center'>
-                <div className='flex-col'>
-                      <div>
-                       <img src="https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/392801643.jpg?k=f2583bd0a635e8b67568423196ccc3f6f892dff381921eeca6f2f44e6cead1fc&o=?s=375x210&ar=16x9" alt=""   className='w-[240px] h-[30vh] mt-7 rounded-xl'/>
-                      </div>
-                       <div className='flex justify-between mt-3'>
-                         <h1 className=' text-xl font-bold'>Vicky Hotel</h1>
-                         <h1 className=' text-xl font-bold order-1'> $50</h1>
-                        </div>
-                        <div className='flex justify-center mt-2'>
-                            <button className='bg-indigo-600 text-white px-10 py-2 rounded-xl hover:bg-sky-700'>
-                                Book Now
-                            </button>
-                        </div>
-                      </div>
-                </div>
+           
+           <div className='mt-10 '>
+              <div className="flex-col">
+              <h1 className='text-center text-3xl tracking-normal  font-serif font-bold'>Here are some places for you to book Now </h1>
+               <div className="flex justify-center">
+               <div className="   mt-3 py-10 px-7 bg-gray-200 w-[50rem] h-[20vh]  rounded-lg">
+                <Input label="Search Hotel" onChange={handleSearch} />
+              </div>
+               </div>
+            <div className='flex flex-wrap gap-10 justify-center mt-10'>    
+           {filteredHotels.map((hotel)=>(
+             <div key={hotel.name} className={`shadow-lg shadow-slate-400  w-[340px] h-[80vh] rounded-xl hover:scale-105 duration-300 flex  justify-center ${search ? "block":"hidden"}`}>
+             <div className='flex-col'>
+                   <div>
+                <img src={hotel.image} alt=""   className='w-[290px] h-[40vh] mt-7 rounded-xl'/>
+                   </div>
+                    <div className='flex justify-between mt-3'>
+                      <h1 className=' text-xl font-bold'>{hotel.name}</h1>
+                      <h1 className=' text-xl font-bold order-1'>{hotel.price}</h1>
+                     </div>
+                     <div>
+                      <p></p>
+                     </div>
+                     <div className='flex justify-center mt-2'>
+                       <Link to="/log-in">
+                       <button className='bg-indigo-600 text-white px-10 py-2 rounded-xl hover:bg-sky-700'>
+                             Book Now
+                         </button>
+                       </Link>
+                     </div>
+                   </div>
+             </div>
+          
+           ))}
                 
             </div>
+              </div>
+
+
+              <h1 className="text-center text-3xl font-serif font-semibold my-4">For Tourism </h1>
+         <div className="flex justify-center ">
+            <div className="flex justify-center gap-x-4 gap-y-4 flex-wrap">
+                 {hotels.map((hotel)=>{
+                    return(
+                      <div className="bg-gray-100 h-[76vh] w-[340px] rounded-lg px-6 py-6  ">
+                      <img src={hotel.image} alt=""  className="h-[38vh] w-[33rem]   rounded-lg"  />
+                      <div className="flex justify-evenly mt-4 font-semibold font-serif">
+                        <h1>{hotel.location}</h1>
+                        <h1>{hotel.price}</h1>
+                      </div>
+                      <p className="font-thin">Kakum  National Park is The park's best-known feature is undoubtedly its 7 suspension bridges which form a 333-meter long canopy walkway</p>
+                        <div className=" flex justify-center">
+                         <Link to="/log-in">
+                         <button className="bg-black text-white py-2 px-11 rounded-lg mt-3">
+                              Booking
+                          </button>
+                         </Link>
+                        </div>
+                </div>
+                    ); 
+                 })}
+            </div>
+         </div>        
+
          </div>
+       {/* Cards for event planner for Tourism */}
+        <h1 className="text-center text-3xl font-serif font-semibold my-6">For Tourism </h1>
+         <div className="flex justify-center ">
+            <div className="flex justify-center gap-x-4 gap-y-4 flex-wrap">
+                 {Tourism.map((Tour)=>{
+                    return(
+                      <div className="bg-gray-100 h-[77vh] w-[340px] rounded-lg px-6 py-6  ">
+                      <img src={Tour.Image} alt=""  className="h-[38vh] w-[33rem]   rounded-lg"  />
+                      <div className="flex justify-evenly mt-4 font-semibold font-serif">
+                        <h1>{Tour.Location}</h1>
+                        <h1>{Tour.Price}</h1>
+                      </div>
+                      <p className="font-thin">Kakum  National Park is The park's best-known feature is undoubtedly its 7 suspension bridges which form a 333-meter long canopy walkway</p>
+                        <div className=" flex justify-center">
+                        <button  className="bg-black text-white py-2 px-11 rounded-lg mt-3">Booking</button>
+                        </div>
+                </div>
+                    ); 
+                 })}
+            </div>
+         </div>
+
+
+         <h1 className="text-center my-5 font-serif font-semibold text-3xl">People Who recommended on our Event Planner </h1>
+         <div className="flex justify-center ">
+            <div className="flex justify-center gap-x-4 gap-y-4 flex-wrap">
+                 {People.map((Tour)=>{
+                    return(
+                      <div className=" h-[60vh] w-[340px] rounded-lg px-6 py-6  ">
+                      <img src={Tour.image} alt=""  className="h-[38vh] w-[33rem]   rounded-lg"  />
+                      <div className="flex justify-evenly mt-4 font-semibold font-serif">
+                      </div>
+                        <h1>{Tour.Name}</h1>
+                      <p className="font-thin">{Tour.detail}</p>
+                </div>
+                    ); 
+                 })}
+            </div>
+         </div>
+               
+             
+
   <div className='mt-14'>
   <div className=" bg-black h-[80vh] flex justify-center">
       <div className="mt-28 text-white">
