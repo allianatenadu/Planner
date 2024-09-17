@@ -12,38 +12,43 @@ export default function Booking() {
     {
       Name: "Kempinski Hotel",
       price: "$100",
-      image: "https://www.kempinski.com/var/site/storage/images/4/4/1/3/1573144-1-eng-GB/968e74a83d9a-75399546_4K.jpg"
+      image: "https://www.kempinski.com/var/site/storage/images/4/4/1/3/1573144-1-eng-GB/968e74a83d9a-75399546_4K.jpg",
+      Details:"The combination of European luxury, first-class service and local flavours proves to be popular among locals"
     },
     {
       
       Name: "Accra city Hotel",
       price: "$400",
-      image: "https://media-cdn.tripadvisor.com/media/photo-p/2c/29/0c/19/accra-city-hoteljpg.jpg"
+      image: "https://media-cdn.tripadvisor.com/media/photo-p/2c/29/0c/19/accra-city-hoteljpg.jpg",
+      Details:"Formed from the merger of distinct settlements around British Fort James, Dutch Fort Crêvecoeur (Ussher Fort), and Danish Fort Christiansborg as Jamestown,"
     },
     {
       
       Name: "Labadi Beach Hotel",
       price: "$100",
-      image: "https://labadibeachhotelgh.com/wp-content/uploads/front-v.jpg"
+      image: "https://labadibeachhotelgh.com/wp-content/uploads/front-v.jpg",
+      Details:"Dharampal Satyapal Group is a global conglomerate company founded in 1929 in Chandni Chowk, New Delhi by Lala Dharampal Sugandhi. Dharampal's son, Satyapal,"
     },
     {
       
       Name: "Alisa Hotel",
       price: "$100",
-      image: "https://alisa-hotel.accra-hotels-gh.com/data/Photos/OriginalPhoto/5308/530838/530838702/accra-alisa-hotel-photo-24.JPEG"
+      image: "https://alisa-hotel.accra-hotels-gh.com/data/Photos/OriginalPhoto/5308/530838/530838702/accra-alisa-hotel-photo-24.JPEG",
+      Details:"As of December 31, 2020, there were an average of 313.1 rooms per hotel in the upper upscale chain type in the United States. In comparison, hotels"
     },
     {
       
       Name: "Movenpick Hotel",
       price: "$100",
       image: "https://www.accrahotelsnow.com/data/Pics/OriginalPhoto/2717/271741/271741745/pic-movenpick-ambassador-hotel-accra-80.JPEG",
-      Details:""
+      Details:" The first Ambassador Hotel was established in 1957, as a gift by the United Kingdom to the Ghanaian government, on the attainment of independence."
     },
     {
      
       Name: "La Palm Beach Hotel",
       price: "$100",
-      image: "https://www.hotelscombined.ca/himg/da/33/1f/expedia_group-11774-19912745-307012.jpg"
+      image: "https://www.hotelscombined.ca/himg/da/33/1f/expedia_group-11774-19912745-307012.jpg",
+      Details:"The Best Western Royal Beach Hotel was built on a one-acre field in 1866 on the junction between South Parade and St Helens Parade."
     },
   ]
 
@@ -111,7 +116,7 @@ export default function Booking() {
     const People=[
       {
    Name:"Merriam",
-   detail:"This web app is Good and I like it  ",
+   detail:"This web app is Good and I like it   ",
    image:"https://images.pexels.com/photos/3992656/pexels-photo-3992656.png"
       },
       {
@@ -232,13 +237,13 @@ export default function Booking() {
             <div className="flex justify-center gap-x-4 gap-y-4 flex-wrap">
                  {hotels.map((hotel)=>{
                     return(
-                      <div className="bg-gray-100 h-[76vh] w-[340px] rounded-lg px-6 py-6  ">
+                      <div className="bg-gray-100 h-[80vh] w-[340px] rounded-lg px-6 py-6  ">
                       <img src={hotel.image} alt=""  className="h-[38vh] w-[33rem]   rounded-lg"  />
                       <div className="flex justify-evenly mt-4 font-semibold font-serif">
                         <h1>{hotel.Name}</h1>
                         <h1>{hotel.price}</h1>
                       </div>
-                      <p className="font-thin">Kakum  National Park is The park's best-known feature is undoubtedly its 7 suspension bridges which form a 333-meter long canopy walkway</p>
+                      <p className="font-thin">{hotel.Details}</p>
                         <div className=" flex justify-center">
                          <Link to="/log-in">
                          <button className="bg-black text-white py-2 px-11 rounded-lg mt-3">
