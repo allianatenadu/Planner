@@ -28,20 +28,17 @@ function Login() {
 
   return (
     <div
-      className="bg-cover bg-center bg-no-repeat min-h-screen flex justify-center  items-center w-screen"
-      style={{
-        backgroundImage:
-          'url("https://images.pexels.com/photos/27468751/pexels-photo-27468751/free-photo-of-a-blue-ocean-with-a-rocky-cliff-in-the-background.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load")',
-      }}
+      className="bg-cover bg-center bg-no-repeat min-h-screen flex justify-center brightness-90  items-center w-screen bg-[url(https://images.pexels.com/photos/27622076/pexels-photo-27622076/free-photo-of-traditional-carpets-from-sidi-bou-said-tunisia.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)] "
+     
     >
       <div className="text-black flex justify-center">
-        <div className="backdrop-blur-lg w-[470px] h-[76vh] rounded-xl p-4">
+        <div className="backdrop-blur-lg w-[470px] h-[76vh] rounded-xl p-4   ">
           <div className="flex justify-center">
           <Link to="/login">
           <a href=""  className="mt-3 text-4xl  text-white font-bold">Login</a> 
           </Link>
           </div>
-          <div className="flex justify-center">
+          <div className="flex justify-center ">
             <div className="flex-col">
               <form onSubmit={handleSubmit(onSubmit)}>
                 <div className="border-b-2 border-solid border-white w-[340px] h-[8vh] mt-3 flex justify-between">

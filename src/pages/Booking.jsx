@@ -116,17 +116,19 @@ export default function Booking() {
     const People=[
       {
    Name:"Merriam",
-   detail:"This web app is Good and I like it   ",
+   detail:"This web app is Good and I like it , Because when I have a business meeting I will, just book and fix a date for the meeting  ",
    image:"https://images.pexels.com/photos/3992656/pexels-photo-3992656.png"
       },
       {
-        Name:"John wick",
-        detail:"This web app is Good and I like it  ",
+        Name:"John Akans",
+        detail:"This web app is Good and I like it, because I book for Tourism  and it is very easy to use , it also save time ",
+
         image:"https://img.freepik.com/premium-photo/man-wearing-glasses-sits-chair-with-shirt-that-says-he-is-smiling_995407-128970.jpg?size=626&ext=jpg&ga=GA1.2.610418126.1724349891&semt=ais_hybrid"
            },
            {
-            Name:"Merriam",
-            detail:"This web app is Good and I like it  ",
+            Name:"Samuel CoCo",
+            detail:"This web app is Good and I like it. my Opinion  is that it is very easy to use and it is very good ",
+
             image:"https://img.freepik.com/premium-photo/portrait-handsome-black-young-african-businessman-wearing-casual-clothes-outdoors-city_251136-85488.jpg?size=626&ext=jpg&ga=GA1.2.610418126.1724349891&semt=ais_hybrid"
                },
     ]
@@ -272,7 +274,10 @@ export default function Booking() {
                       </div>
                       <p className="font-thin">{Tour.Details}</p>
                         <div className=" flex justify-center">
-                        <button  className="bg-black text-white py-2 px-11 rounded-lg mt-3">Booking</button>
+                           <Link  to="/log-in">
+
+                           <button  className="bg-black text-white py-2 px-11 rounded-lg mt-3">Booking</button>
+                           </Link>
                         </div>
                 </div>
                     ); 
@@ -288,7 +293,7 @@ export default function Booking() {
                     return(
                       <div className=" h-[60vh] w-[340px] rounded-lg px-6 py-6 text-center  ">
                       <img src={Tour.image} alt=""  className="h-[38vh] w-[33rem]   object-center  rounded-lg"  />
-                        <h1>{Tour.Name}</h1>
+                        <h1 className="font-semibold font-serif ">{Tour.Name}</h1>
                       <p className="font-thin">{Tour.detail}</p>
                 </div>
                     ); 
