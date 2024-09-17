@@ -10,41 +10,40 @@ export default function Booking() {
 
   const hotels = [
     {
-      name: "c",
-      location: "Location 1",
+      Name: "Kempinski Hotel",
       price: "$100",
-      image: "https://cf.bstatic.com/xdata/images/hotel/square600/284019694.webp?k=d67d819e299e2f164ea9d24f632c8cf28d0eb64af9b238c2b06ea35d8cc291b3&o="
+      image: "https://www.kempinski.com/var/site/storage/images/4/4/1/3/1573144-1-eng-GB/968e74a83d9a-75399546_4K.jpg"
     },
     {
-      name: " c",
-      location: "Trasacco",
+      
+      Name: "Accra city Hotel",
       price: "$400",
-      image: "https://images.pexels.com/photos/186077/pexels-photo-186077.jpeg?auto=compress&cs=tinysrgb&w=600"
+      image: "https://media-cdn.tripadvisor.com/media/photo-p/2c/29/0c/19/accra-city-hoteljpg.jpg"
     },
     {
-      name: "C",
-      location: "Location 1",
+      
+      Name: "Labadi Beach Hotel",
       price: "$100",
-      image: "https://images.pexels.com/photos/16534745/pexels-photo-16534745/free-photo-of-pavilions-on-gadisar-lake.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      image: "https://labadibeachhotelgh.com/wp-content/uploads/front-v.jpg"
     },
     {
-      name: "C",
-      location: "Location 1",
+      
+      Name: "Alisa Hotel",
       price: "$100",
-      image: "https://images.pexels.com/photos/16534745/pexels-photo-16534745/free-photo-of-pavilions-on-gadisar-lake.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      image: "https://alisa-hotel.accra-hotels-gh.com/data/Photos/OriginalPhoto/5308/530838/530838702/accra-alisa-hotel-photo-24.JPEG"
     },
     {
-      name: "C",
-      location: "Location 1",
+      
+      Name: "Movenpick Hotel",
       price: "$100",
-      image: "https://images.pexels.com/photos/16534745/pexels-photo-16534745/free-photo-of-pavilions-on-gadisar-lake.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      image: "https://www.accrahotelsnow.com/data/Pics/OriginalPhoto/2717/271741/271741745/pic-movenpick-ambassador-hotel-accra-80.JPEG",
       Details:""
     },
     {
-      name: "C",
-      location: "Location 1",
+     
+      Name: "La Palm Beach Hotel",
       price: "$100",
-      image: "https://images.pexels.com/photos/16534745/pexels-photo-16534745/free-photo-of-pavilions-on-gadisar-lake.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      image: "https://www.hotelscombined.ca/himg/da/33/1f/expedia_group-11774-19912745-307012.jpg"
     },
   ]
 
@@ -57,7 +56,7 @@ export default function Booking() {
   }
 
   const filteredHotels = hotels.filter((hotel) =>{
-    return hotel.name.toLowerCase().includes(search.toLowerCase())
+    return hotel.Name.toLowerCase().includes(search.toLowerCase())
   })
 
 
@@ -68,43 +67,43 @@ export default function Booking() {
         Location:"Mount Afadjato",
         Price:"$50",
         Image:"https://visitghana.com/wp-content/uploads/2019/02/2703_Mt.-Afajato.jpg",
-        Details:"Book"
+        Details:"When the Ewe people migrated to the area, wild animals have been attacking them and sometimes killing their babies so the people decided fight back "
        },
        {
         Name:"",
         Location:"Larabanga mosque",
         Price:"$50",
         Image:"https://mosqpedia.org/img/cache/largeimage/nyuLkvCn5SBFJKhDYx1X6D2isUyb6LiAFKek3yTZ",
-        Details:"Book"
+        Details:"The mosque houses a very old Koran which is thought to have been delivered from heaven to an Imam called Bramah, around 1650, after he had prayed hard for a Koran."
        },
        {
         Name:"",
         Location:"Elmina Castle",
         Price:"$50",
         Image:"https://149357548.v2.pressablecdn.com/wp-content/uploads/2011/10/elmina.jpg",
-        Details:"Book"
+        Details:"Elmina Castle is a historical site, and was a major filming location for Werner Herzog's 1987 drama film Cobra Verde. The castle is recognized by UNESCO "
        },
        {
-        Name:"Kamkum National park",
+      
         Location:"Adomi bridge",
         Price:"$50",
         Image:"https://civilengineeringgh.wordpress.com/wp-content/uploads/2015/12/screenshot-9.png",
-        Details:"Book"
+        Details:"The bridge was officially opened on 25 January 1957 by Kwame Nkrumah, then Prime Minister of the Gold Coast and first President of Ghana."
        },
        {
-        Name:"Boti Fall",
-        Location:"London",
+       
+        Location:"Boti Fall",
         Price:"$50",
         Image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxefz5kW9mbiw6s2PLbVGNVSdnBNiBGBZlA1hhMfNibwmXFKwd",
-        Details:"Book"
+        Details:", the Boti falls was found in the forest by a white catholic priest surveying the area. In the 1960's the waterfall was very famousyarn"
        },
        
        {
-        Name:"Kamkum National park",
-        Location:"London",
+      
+        Location:"Kamkum National park",
         Price:"$50",
         Image:"https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/a8/38/72/caption.jpg?w=300&h=300&s=1",
-        Details:"Book"
+        Details:"Kakum National Park is The park's best-known feature is undoubtedly its 7 suspension bridges which form a 333-meter long canopy walkway"
        },       
     ]
 //People who  like our Event Planner 
@@ -123,16 +122,14 @@ export default function Booking() {
            {
             Name:"Merriam",
             detail:"This web app is Good and I like it  ",
-            image:"https://images.pexels.com/photos/3992656/pexels-photo-3992656.png"
+            image:"https://img.freepik.com/premium-photo/portrait-handsome-black-young-african-businessman-wearing-casual-clothes-outdoors-city_251136-85488.jpg?size=626&ext=jpg&ga=GA1.2.610418126.1724349891&semt=ais_hybrid"
                },
     ]
 
   return (
     <div >
-        <div className='bg-cover bg-center bg-no-repeat bg-[url("")] h-[70vh] flex justify-center  w-[100%]' style={{
-        backgroundImage: 'url("https://images.pexels.com/photos/16534745/pexels-photo-16534745/free-photo-of-pavilions-on-gadisar-lake.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2")',
-      }}>
-         <div className='text-white text-xl mt-4'>
+        <div className='bg-cover bg-center bg-no-repeat bg-[url("https://i.pinimg.com/564x/5f/e8/4b/5fe84b13eda11d3e06c2ad644c0431dc.jpg")] h-[70vh] flex justify-center  w-[100%]' >
+         <div className='text-gray-900 font-bold text-xl mt-4'>
             <nav className='flex flex-wrap gap-8'>
                <Link to="/">
                <a href="" className='border-b-4 border-indigo-600 pb-2 border-opacity-0 hover:border-opacity-100 transition-all duration-300 ease-in-out'>Home</a>
@@ -149,7 +146,7 @@ export default function Booking() {
             </nav>
          </div>
          <div className="flex justify-center ">
-         <div className="flex-col text-white absolute left-[25rem] top-36">
+         <div className="flex-col text-black absolute left-[25rem] top-36">
           <h1 className='text-5xl font-bold'>Proxima Event Planner</h1>
                   <h1 className='text-2xl mt-3 min-h-2'>
                     Book your event with us and make it memorable,<br /> we are here to make your event memorable.
@@ -202,13 +199,13 @@ export default function Booking() {
                </div>
             <div className='flex flex-wrap gap-10 justify-center mt-10'>    
            {filteredHotels.map((hotel)=>(
-             <div key={hotel.name} className={`shadow-lg shadow-slate-400  w-[340px] h-[80vh] rounded-xl hover:scale-105 duration-300 flex  justify-center ${search ? "block":"hidden"}`}>
+             <div key={hotel.Name} className={`shadow-lg shadow-slate-400  w-[340px] h-[80vh] rounded-xl hover:scale-105 duration-300 flex  justify-center ${search ? "block":"hidden"}`}>
              <div className='flex-col'>
                    <div>
                 <img src={hotel.image} alt=""   className='w-[290px] h-[40vh] mt-7 rounded-xl'/>
                    </div>
                     <div className='flex justify-between mt-3'>
-                      <h1 className=' text-xl font-bold'>{hotel.name}</h1>
+                      <h1 className=' text-xl font-bold'>{hotel.Name}</h1>
                       <h1 className=' text-xl font-bold order-1'>{hotel.price}</h1>
                      </div>
                      <div>
@@ -230,7 +227,7 @@ export default function Booking() {
               </div>
 
 
-              <h1 className="text-center text-3xl font-serif font-semibold my-4">For Tourism </h1>
+              <h1 className="text-center text-3xl font-serif font-semibold my-4">For Hotels</h1>
          <div className="flex justify-center ">
             <div className="flex justify-center gap-x-4 gap-y-4 flex-wrap">
                  {hotels.map((hotel)=>{
@@ -238,7 +235,7 @@ export default function Booking() {
                       <div className="bg-gray-100 h-[76vh] w-[340px] rounded-lg px-6 py-6  ">
                       <img src={hotel.image} alt=""  className="h-[38vh] w-[33rem]   rounded-lg"  />
                       <div className="flex justify-evenly mt-4 font-semibold font-serif">
-                        <h1>{hotel.location}</h1>
+                        <h1>{hotel.Name}</h1>
                         <h1>{hotel.price}</h1>
                       </div>
                       <p className="font-thin">Kakum  National Park is The park's best-known feature is undoubtedly its 7 suspension bridges which form a 333-meter long canopy walkway</p>
@@ -258,17 +255,17 @@ export default function Booking() {
          </div>
        {/* Cards for event planner for Tourism */}
         <h1 className="text-center text-3xl font-serif font-semibold my-6">For Tourism </h1>
-         <div className="flex justify-center ">
-            <div className="flex justify-center gap-x-4 gap-y-4 flex-wrap">
+         <div className="flex justify-center mt-[4rem] ">
+            <div className="flex justify-center gap-x-10 gap-y-10 flex-wrap">
                  {Tourism.map((Tour)=>{
                     return(
-                      <div className="bg-gray-100 h-[77vh] w-[340px] rounded-lg px-6 py-6  ">
+                      <div className="bg-gray-100 h-[80vh] w-[340px] rounded-lg px-6 py-6  ">
                       <img src={Tour.Image} alt=""  className="h-[38vh] w-[33rem]   rounded-lg"  />
                       <div className="flex justify-evenly mt-4 font-semibold font-serif">
                         <h1>{Tour.Location}</h1>
                         <h1>{Tour.Price}</h1>
                       </div>
-                      <p className="font-thin">Kakum  National Park is The park's best-known feature is undoubtedly its 7 suspension bridges which form a 333-meter long canopy walkway</p>
+                      <p className="font-thin">{Tour.Details}</p>
                         <div className=" flex justify-center">
                         <button  className="bg-black text-white py-2 px-11 rounded-lg mt-3">Booking</button>
                         </div>
@@ -279,15 +276,13 @@ export default function Booking() {
          </div>
 
 
-         <h1 className="text-center my-5 font-serif font-semibold text-3xl">People Who recommended on our Event Planner </h1>
-         <div className="flex justify-center ">
+         <h1 className="text-center my-5 font-serif font-semibold text-3xl mt-[7rem]">People Who recommended on our Event Planner </h1>
+         <div className="flex justify-center mt-[6rem] ">
             <div className="flex justify-center gap-x-4 gap-y-4 flex-wrap">
                  {People.map((Tour)=>{
                     return(
-                      <div className=" h-[60vh] w-[340px] rounded-lg px-6 py-6  ">
-                      <img src={Tour.image} alt=""  className="h-[38vh] w-[33rem]   rounded-lg"  />
-                      <div className="flex justify-evenly mt-4 font-semibold font-serif">
-                      </div>
+                      <div className=" h-[60vh] w-[340px] rounded-lg px-6 py-6 text-center  ">
+                      <img src={Tour.image} alt=""  className="h-[38vh] w-[33rem]   object-center  rounded-lg"  />
                         <h1>{Tour.Name}</h1>
                       <p className="font-thin">{Tour.detail}</p>
                 </div>
