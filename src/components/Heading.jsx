@@ -109,7 +109,7 @@ import { NavLink } from 'react-router-dom';
 export default function Heading() {
   return (
     <div className='bg-gray-100 h-[90vh] w-[100%] p-3'>
-      <nav className='flex justify-center gap-x-20 pt-4'>
+      <nav className='flex justify-center gap-x-20 pt-5'>
          <a href="" className='border-b-4 border-solid border-opacity-0 pb-2 border-teal-800 hover:border-opacity-100 duration-300 ease-in-out '>Home</a>
         <NavLink to="/booking">
         <a href="" className='border-b-4 border-solid border-opacity-0 pb-2 border-teal-800 hover:border-opacity-100 duration-300 ease-in-out'>Booking</a>
