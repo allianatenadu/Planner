@@ -26,22 +26,27 @@ function Login() {
     }
   };
 
+  const [show, setShow] = useState(false);
+
+  const handleShow = () => {
+    setShow(!show);
+  };
+
   return (
     <div
-      className="bg-cover bg-center bg-no-repeat min-h-screen flex justify-center brightness-90  items-center w-screen bg-[url(https://images.pexels.com/photos/27622076/pexels-photo-27622076/free-photo-of-traditional-carpets-from-sidi-bou-said-tunisia.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)] "
-     
+      className="bg-cover bg-center bg-no-repeat min-h-screen flex justify-center items-center w-screen bg-[url(https://images.pexels.com/photos/27622076/pexels-photo-27622076/free-photo-of-traditional-carpets-from-sidi-bou-said-tunisia.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)]"
     >
-      <div className="text-black flex justify-center">
-        <div className="backdrop-blur-lg w-[470px] h-[76vh] rounded-xl p-4   ">
+      <div className="text-black flex justify-center relative">
+        <div className="backdrop-blur-lg w-full sm:w-[470px] h-[80vh] sm:h-[76vh] rounded-xl p-4">
           <div className="flex justify-center">
-          <Link to="/login">
-          <a href=""  className="mt-3 text-4xl  text-white font-bold">Login</a> 
-          </Link>
+            <Link to="/login">
+              <a href="" className="mt-3 text-4xl text-white font-bold">Login</a>
+            </Link>
           </div>
-          <div className="flex justify-center ">
+          <div className="flex justify-center">
             <div className="flex-col">
               <form onSubmit={handleSubmit(onSubmit)}>
-                <div className="border-b-2 border-solid border-white w-[340px] h-[8vh] mt-3 flex justify-between">
+                <div className="border-b-2 border-solid border-white w-[90%] sm:w-[340px] h-[8vh] mt-3 flex justify-between">
                   <input
                     type="text"
                     placeholder="First Name"
@@ -50,7 +55,7 @@ function Login() {
                   />
                   <IoMdPerson className="text-2xl text-black mt-5" />
                 </div>
-                <div className="border-b-2 border-solid border-white w-[340px] h-[8vh] mt-6 flex justify-between">
+                <div className="border-b-2 border-solid border-white w-[90%] sm:w-[340px] h-[8vh] mt-6 flex justify-between">
                   <input
                     type="password"
                     placeholder="Password"
@@ -60,7 +65,7 @@ function Login() {
                   />
                   <FaLock className="text-2xl text-black mt-5" />
                 </div>
-                <div className="border-b-2 border-solid border-white w-[340px] h-[8vh] mt-6 flex justify-between">
+                <div className="border-b-2 border-solid border-white w-[90%] sm:w-[340px] h-[8vh] mt-6 flex justify-between">
                   <input
                     type="email"
                     placeholder="Email here"
@@ -76,7 +81,8 @@ function Login() {
                     type="submit"
                     value={loading ? "Loading..." : "Submit"}
                     disabled={loading}
-                    className="bg-lime-800 rounded-xl w-[17rem] h-[8vh] hover:bg-sky-500 border-none font-serif text-2xl"
+                    className="bg-lime-800 rounded-xl w-[80%] sm:w-[17rem] h-[8vh] hover:bg-sky-500 border-none font-serif text-2xl"
+                    onClick={handleShow}
                   />
                 </div>
               </form>
@@ -88,15 +94,29 @@ function Login() {
                   />
                   <h2 className="text-white">Done with it</h2>
                 </div>
-              <Link to="/sign-up">
-              <a href="" className="mt-1 text-white">
-                  Forget Password
-                </a>
-              </Link>
+                <Link to="/sign-up">
+                  <a href="" className="mt-1 text-white">Forget Password</a>
+                </Link>
               </div>
             </div>
           </div>
         </div>
+        {show && (
+          <div
+            className="absolute top-5 h-[50vh] w-full sm:w-[40rem] p-5 bg-white rounded-lg shadow-2xl shadow-black"
+            onClick={handleShow}
+          >
+            <h1 className="text-center text-3xl font-serif font-semibold text-green-600">
+              Successful Booked
+            </h1>
+            <div className="text-center mt-24 font-serif text-2xl">
+              <p>Please check your email box for the booking confirmation.</p>
+              <p className="text-xl font-serif">
+                Thank you for choosing our services and have a nice day.
+              </p>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );

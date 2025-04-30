@@ -135,155 +135,169 @@ export default function Booking() {
 
   return (
     <div >
-        <div className='bg-cover bg-center bg-no-repeat bg-[url("https://i.pinimg.com/564x/5f/e8/4b/5fe84b13eda11d3e06c2ad644c0431dc.jpg")] h-[70vh] flex justify-center  w-[100%]' >
-         <div className='text-gray-900 font-bold text-xl mt-4'>
-            <nav className='flex flex-wrap gap-8'>
-               <Link to="/">
-               <a href="" className='border-b-4 border-indigo-600 pb-2 border-opacity-0 hover:border-opacity-100 transition-all duration-300 ease-in-out'>Home</a>
-               </Link>
-                <Link to="/booking">
-                <a href="" className='border-b-4 border-indigo-600 pb-2 border-opacity-0 hover:border-opacity-100 transition-all duration-300 ease-in-out'>Booking</a>
-                </Link>
-                <Link to="/contact">
-                <a href="" className='border-b-4 border-indigo-600 pb-2 border-opacity-0 hover:border-opacity-100 transition-all duration-300 ease-in-out'>Contact</a>
-                </Link>
-                <Link to="/event">
-                <a href="" className='border-b-4 border-indigo-600 pb-2 border-opacity-0 hover:border-opacity-100 transition-all duration-300 ease-in-out'>Event</a>
-                </Link>
-            </nav>
-         </div>
-         <div className="flex justify-center ">
-         <div className="flex-col text-black absolute left-[25rem] top-36">
-          <h1 className='text-5xl font-bold'>Proxima Event Planner</h1>
-                  <h1 className='text-2xl mt-3 min-h-2'>
-                    Book your event with us and make it memorable,<br /> we are here to make your event memorable.
-                  </h1>
-          </div>
-         </div>
-        </div>
-        <div className='mx-20 mt-14'>
-  <Carousel
-      className="rounded-xl"
-      navigation={({ setActiveIndex, activeIndex, length }) => (
-        <div className="absolute bottom-4 left-2/4 z-50 flex -translate-x-2/4 gap-2">
-          {new Array(length).fill("").map((_, i) => (
-            <span
-              key={i}
-              className={`block h-1 cursor-pointer rounded-2xl transition-all content-[''] ${
-                activeIndex === i ? "w-8 bg-white" : "w-4 bg-white/50"
-              }`}
-              onClick={() => setActiveIndex(i)}
-            />
-          ))}
-        </div>
-      )}
-    >
-      <img
-        src="https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-        alt="image 1"
-        className="h-[78vh] w-full object-cover"
-      />
-      <img
-        src="https://images.pexels.com/photos/1001965/pexels-photo-1001965.jpeg"
-        alt="image 2"
-        className="h-[78vh] w-full object-cover"
-      />
-      <img
-        src="https://images.pexels.com/photos/2869215/pexels-photo-2869215.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-        alt="image 3"
-        className="h-[78vh] w-full object-cover"
-      />
-    </Carousel>
+        <div className="bg-cover bg-center bg-no-repeat bg-[url('https://i.pinimg.com/564x/5f/e8/4b/5fe84b13eda11d3e06c2ad644c0431dc.jpg')] h-[70vh] flex justify-center items-center w-full">
+  <div className="w-full px-4">
+    <div className="text-gray-900 font-bold text-xl mt-4">
+      <nav className="flex flex-wrap justify-center gap-4 sm:gap-6 md:gap-8 mt-4 text-white text-sm sm:text-base">
+        <Link to="/" className="border-b-4 border-indigo-600 pb-2 border-opacity-0 hover:border-opacity-100 transition-all duration-300 ease-in-out">
+          Home
+        </Link>
+        <Link to="/booking" className="border-b-4 border-indigo-600 pb-2 border-opacity-0 hover:border-opacity-100 transition-all duration-300 ease-in-out">
+          Booking
+        </Link>
+        <Link to="/contact" className="border-b-4 border-indigo-600 pb-2 border-opacity-0 hover:border-opacity-100 transition-all duration-300 ease-in-out">
+          Contact
+        </Link>
+        <Link to="/event" className="border-b-4 border-indigo-600 pb-2 border-opacity-0 hover:border-opacity-100 transition-all duration-300 ease-in-out">
+          Event
+        </Link>
+      </nav>
+    </div>
+
+    <div className="flex flex-col items-center justify-center text-center w-full h-full bg-cover bg-center bg-no-repeat bg-[url('https://i.pinimg.com/564x/5f/e8/4b/5fe84b13eda11d3e06c2ad644c0431dc.jpg')]">
+      <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">Proxima Event Planner</h1>
+      <p className="text-sm sm:text-base md:text-xl mt-4 text-white">
+        Book your event with us and make it memorable,<br />
+        we are here to make your event memorable.
+      </p>
+    </div>
   </div>
+</div>
+
+        <div className="mx-4 sm:mx-8 lg:mx-20 mt-14 relative">
+  <Carousel
+    className="rounded-xl"
+    navigation={({ setActiveIndex, activeIndex, length }) => (
+      <div className="absolute bottom-4 left-2/4 z-50 flex -translate-x-2/4 gap-2">
+        {new Array(length).fill("").map((_, i) => (
+          <span
+            key={i}
+            className={`block h-1 cursor-pointer rounded-2xl transition-all content-[''] ${
+              activeIndex === i ? "w-8 bg-white" : "w-4 bg-white/50"
+            }`}
+            onClick={() => setActiveIndex(i)}
+          />
+        ))}
+      </div>
+    )}
+  >
+    <img
+      src="https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      alt="image 1"
+      className="w-full object-cover max-h-[75vh] sm:max-h-[70vh] lg:max-h-[78vh]"
+    />
+    <img
+      src="https://images.pexels.com/photos/1001965/pexels-photo-1001965.jpeg"
+      alt="image 2"
+      className="w-full object-cover max-h-[75vh] sm:max-h-[70vh] lg:max-h-[78vh]"
+    />
+    <img
+      src="https://images.pexels.com/photos/2869215/pexels-photo-2869215.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      alt="image 3"
+      className="w-full object-cover max-h-[75vh] sm:max-h-[70vh] lg:max-h-[78vh]"
+    />
+  </Carousel>
+</div>
+
            
-           <div className='mt-10 '>
-              <div className="flex-col">
-              <h1 className='text-center text-3xl tracking-normal  font-serif font-bold'>Here are some places for you to book Now </h1>
-               <div className="flex justify-center">
-               <div className="   mt-3 py-10 px-7 bg-gray-200 w-[50rem] h-[20vh]  rounded-lg">
-                <Input label="Search Hotel" onChange={handleSearch} />
-              </div>
-               </div>
-            <div className='flex flex-wrap gap-10 justify-center mt-10'>    
-           {filteredHotels.map((hotel)=>(
-             <div key={hotel.Name} className={`shadow-lg shadow-slate-400  w-[340px] h-[80vh] rounded-xl hover:scale-105 duration-300 flex  justify-center ${search ? "block":"hidden"}`}>
-             <div className='flex-col'>
-                   <div>
-                <img src={hotel.image} alt=""   className='w-[290px] h-[40vh] mt-7 rounded-xl'/>
-                   </div>
-                    <div className='flex justify-between mt-3'>
-                      <h1 className=' text-xl font-bold'>{hotel.Name}</h1>
-                      <h1 className=' text-xl font-bold order-1'>{hotel.price}</h1>
-                     </div>
-                     <div>
-                      <p></p>
-                     </div>
-                     <div className='flex justify-center mt-2'>
-                       <Link to="/log-in">
-                       <button className='bg-indigo-600 text-white px-10 py-2 rounded-xl hover:bg-sky-700'>
-                             Book Now
-                         </button>
-                       </Link>
-                     </div>
-                   </div>
-             </div>
-          
-           ))}
-                
+  <div className='mt-10 px-4'>
+  <div className="flex flex-col">
+    <h1 className='text-center text-2xl sm:text-3xl tracking-normal font-serif font-bold'>
+      Here are some places for you to book Now
+    </h1>
+
+    <div className="flex justify-center mt-3">
+      <div className="py-6 px-4 sm:px-7 bg-gray-200 w-full max-w-4xl rounded-lg">
+        <Input label="Search Hotel" onChange={handleSearch} />
+      </div>
+    </div>
+
+    <div className='flex flex-wrap gap-10 justify-center mt-10'>
+      {filteredHotels.map((hotel) => (
+        <div
+          key={hotel.Name}
+          className={`shadow-lg shadow-slate-400 w-full sm:w-[340px] h-auto rounded-xl hover:scale-105 duration-300 flex justify-center ${search ? "block" : "hidden"}`}
+        >
+          <div className='flex flex-col items-center p-4'>
+            <img src={hotel.image} alt="" className='w-full h-60 object-cover rounded-xl' />
+
+            <div className='flex justify-between w-full mt-3'>
+              <h1 className='text-lg font-bold'>{hotel.Name}</h1>
+              <h1 className='text-lg font-bold'>{hotel.price}</h1>
             </div>
-              </div>
 
-
-              <h1 className="text-center text-3xl font-serif font-semibold my-4">For Hotels</h1>
-         <div className="flex justify-center ">
-            <div className="flex justify-center gap-x-4 gap-y-4 flex-wrap">
-                 {hotels.map((hotel)=>{
-                    return(
-                      <div className="bg-gray-100 h-[80vh] w-[340px] rounded-lg px-6 py-6  ">
-                      <img src={hotel.image} alt=""  className="h-[38vh] w-[33rem]   rounded-lg"  />
-                      <div className="flex justify-evenly mt-4 font-semibold font-serif">
-                        <h1>{hotel.Name}</h1>
-                        <h1>{hotel.price}</h1>
-                      </div>
-                      <p className="font-thin">{hotel.Details}</p>
-                        <div className=" flex justify-center">
-                         <Link to="/log-in">
-                         <button className="bg-black text-white py-2 px-11 rounded-lg mt-3">
-                              Booking
-                          </button>
-                         </Link>
-                        </div>
-                </div>
-                    ); 
-                 })}
+            <div className='flex justify-center mt-4'>
+              <Link to="/log-in">
+                <button className='bg-indigo-600 text-white px-8 py-2 rounded-xl hover:bg-sky-700'>
+                  Book Now
+                </button>
+              </Link>
             </div>
-         </div>        
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
 
-         </div>
+  <h1 className="text-center text-2xl sm:text-3xl font-serif font-semibold my-6">For Hotels</h1>
+
+  <div className="flex justify-center">
+    <div className="flex justify-center gap-6 flex-wrap">
+      {hotels.map((hotel) => (
+        <div key={hotel.Name} className="bg-gray-100 w-full sm:w-[340px] rounded-lg px-4 py-6">
+          <img src={hotel.image} alt="" className="h-60 w-full object-cover rounded-lg" />
+          <div className="flex justify-between mt-4 font-semibold font-serif">
+            <h1>{hotel.Name}</h1>
+            <h1>{hotel.price}</h1>
+          </div>
+          <p className="font-thin mt-2">{hotel.Details}</p>
+          <div className="flex justify-center">
+            <Link to="/log-in">
+              <button className="bg-black text-white py-2 px-10 rounded-lg mt-3">
+                Booking
+              </button>
+            </Link>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</div>
+
        {/* Cards for event planner for Tourism */}
-        <h1 className="text-center text-3xl font-serif font-semibold my-6">For Tourism </h1>
-         <div className="flex justify-center mt-[4rem] ">
-            <div className="flex justify-center gap-x-10 gap-y-10 flex-wrap">
-                 {Tourism.map((Tour)=>{
-                    return(
-                      <div className="bg-gray-100 h-[80vh] w-[340px] rounded-lg px-6 py-6  ">
-                      <img src={Tour.Image} alt=""  className="h-[38vh] w-[33rem]   rounded-lg"  />
-                      <div className="flex justify-evenly mt-4 font-semibold font-serif">
-                        <h1>{Tour.Location}</h1>
-                        <h1>{Tour.Price}</h1>
-                      </div>
-                      <p className="font-thin">{Tour.Details}</p>
-                        <div className=" flex justify-center">
-                           <Link  to="/log-in">
+       <h1 className="text-center text-2xl sm:text-3xl font-serif font-semibold my-6">
+  For Tourism
+</h1>
 
-                           <button  className="bg-black text-white py-2 px-11 rounded-lg mt-3">Booking</button>
-                           </Link>
-                        </div>
-                </div>
-                    ); 
-                 })}
-            </div>
-         </div>
+<div className="flex justify-center mt-10 px-4">
+  <div className="flex justify-center gap-6 flex-wrap max-w-7xl w-full">
+    {Tourism.map((Tour) => (
+      <div
+        key={Tour.Location}
+        className="bg-gray-100 w-full sm:w-[340px] rounded-lg px-4 py-6"
+      >
+        <img
+          src={Tour.Image}
+          alt={Tour.Location}
+          className="h-60 w-full object-cover rounded-lg"
+        />
+        <div className="flex justify-between mt-4 font-semibold font-serif">
+          <h1>{Tour.Location}</h1>
+          <h1>{Tour.Price}</h1>
+        </div>
+        <p className="font-thin mt-2">{Tour.Details}</p>
+        <div className="flex justify-center">
+          <Link to="/log-in">
+            <button className="bg-black text-white py-2 px-10 rounded-lg mt-3">
+              Booking
+            </button>
+          </Link>
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
+
 
 
          <h1 className="text-center my-5 font-serif font-semibold text-3xl mt-[7rem]">People Who recommended on our Event Planner </h1>

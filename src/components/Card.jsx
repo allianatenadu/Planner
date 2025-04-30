@@ -5,98 +5,60 @@ import { Link } from "react-router-dom";
 
 function Card() {
   return (
-    <div>
-       {/* Heading & icons Opening dev    */}
-          <div className="mx-14 my-14 flex justify-between">
-            <div className="text-5xl font-bold text-blue-950"><h1>Popular Hotels</h1></div>
-            <div className="flex justify-center gap-8 mt-2 ">
-            <PiLessThan className="bg-indigo-500 text-white p-3 text-5xl rounded-[4rem] hover:bg-indigo-700" />
-            <PiGreaterThanLight  className="bg-indigo-500 text-white p-3 text-5xl rounded-[4rem] hover:bg-indigo-700"  />
+    <div className="px-4 py-8">
+      {/* Heading & icons */}
+      <div className="flex flex-col md:flex-row justify-between items-center mx-auto max-w-7xl mb-8">
+        <h1 className="text-4xl md:text-5xl font-bold text-blue-950 mb-4 md:mb-0">Popular Hotels</h1>
+        <div className="flex gap-4">
+          <PiLessThan className="bg-indigo-500 text-white p-3 text-4xl rounded-full hover:bg-indigo-700" />
+          <PiGreaterThanLight className="bg-indigo-500 text-white p-3 text-4xl rounded-full hover:bg-indigo-700" />
+        </div>
+      </div>
+
+      {/* Cards container */}
+      <div className="flex flex-col md:flex-row gap-8 items-center justify-center flex-wrap max-w-7xl mx-auto">
+        {[{
+          title: "Hudak Home",
+          img: "https://login.ultraagent.com/agentimagegallery/20698/backyard.jpg",
+          rating: 4.8
+        }, {
+          title: "Wyatt Residency",
+          img: "https://media-cdn.tripadvisor.com/media/photo-s/0f/f7/83/22/poolside-at-the-african.jpg",
+          rating: 4.5
+        }, {
+          title: "Soho Paradise",
+          img: "https://i0.wp.com/greenviewsresidential.com/wp-content/uploads/2018/05/greenviews-luxury-apartments-accra-amenities-pool-al-night.jpg?resize=1080%2C720&ssl=1",
+          rating: 4.9
+        }].map((hotel, index) => (
+          <div
+            key={index}
+            className="border border-slate-300 rounded-tl-[2.77rem] rounded-br-[3rem] w-full max-w-sm"
+          >
+            <img
+              src={hotel.img}
+              alt={hotel.title}
+              className="w-full h-[200px] object-cover rounded-tl-[2.77rem]"
+            />
+            <div className="flex justify-between items-center px-4 mt-4">
+              <h1 className="font-bold text-xl">{hotel.title}</h1>
+              <div className="flex items-center gap-1">
+                <FaStar className="text-amber-400 text-xl" />
+                <h1 className="font-bold text-xl">{hotel.rating}</h1>
+              </div>
             </div>
-           </div>
-       {/* Heading & icons Closing dev    */}
-       {/* Card & icons Opening dev    */}
-           <div className=" flex justify-center gap-8">
-             <div className="border border-solid border-slate-300 w-[340px] rounded-tl-[2.77rem]  rounded-br-[3rem]">
-               <img src="https://login.ultraagent.com/agentimagegallery/20698/backyard.jpg" alt="" className="w-[390px] h-[200px] rounded-tl-[2.77rem]" />
-                <div className="flex justify-center mt-4">
-                <div className="flex justify-between gap-6">
-                  <div>
-                    <h1 className="font-bold text-2xl">Hudak Home</h1>
-                  </div>
-                  <div className="flex justify-center gap-3">
-                  <FaStar className="text-3xl text-amber-400 " /> 
-                  <h1 className="font-bold  text-2xl">4.8</h1>
-                  </div>
-                </div>
-                </div>
-                 <div className="flex justify-center mt-4 mx-11 my-11">
-                  <h1>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum porro dolorum possimus dicta impedit dignissimos laudantium perferendis recusandae quia asperiores fuga in, voluptate illum dolor dolorem ut dolores! Nemo, nobis?
-                  </h1>
-                 </div>
-                <Link to="/booking" >
-                <button className="bg-indigo-600 p-4 w-[340px] rounded-br-[3rem] text-2xl text-slate-50 text-white  hover:bg-indigo-800  ">Book Now
-                </button>
-                </Link>
-             </div>
-
-             <div className="border border-solid border-slate-300 w-[340px] rounded-tl-[2.77rem]  rounded-br-[3rem]">
-               <img src="https://media-cdn.tripadvisor.com/media/photo-s/0f/f7/83/22/poolside-at-the-african.jpg" alt="" className="w-[390px] h-[200px] rounded-tl-[2.77rem]" />
-                <div className="flex justify-center mt-4">
-                <div className="flex justify-between gap-6">
-                  <div>
-                    <h1 className="font-bold text-2xl">Wyatt Residency</h1>
-                  </div>
-                  <div className="flex justify-center gap-3">
-                  <FaStar className="text-3xl text-amber-400 " /> 
-                  <h1 className="font-bold  text-2xl">4.5</h1>
-                  </div>
-                </div>
-                </div>
-                 <div className="flex justify-center mt-4 mx-11 my-11">
-                  <h1>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum porro dolorum possimus dicta impedit dignissimos laudantium perferendis recusandae quia asperiores fuga in, voluptate illum dolor dolorem ut dolores! Nemo, nobis?
-                  </h1>
-                 </div>
-                <Link to="/booking">
-                <button className="bg-indigo-600 p-4 w-[340px] rounded-br-[3rem] text-2xl text-slate-50 text-white hover:bg-indigo-800 ">
-                  Book Now
-                </button>
-                </Link>
-             </div>
-
-             <div className="border border-solid border-slate-300 w-[340px] rounded-tl-[2.77rem]  rounded-br-[3rem]">
-               <img src="https://i0.wp.com/greenviewsresidential.com/wp-content/uploads/2018/05/greenviews-luxury-apartments-accra-amenities-pool-al-night.jpg?resize=1080%2C720&ssl=1" alt="" className="w-[390px] h-[200px] rounded-tl-[2.77rem]" />
-                <div className="flex justify-center mt-4">
-                <div className="flex justify-between gap-6">
-                  <div>
-                    <h1 className="font-bold text-2xl">Soho Paradise</h1>
-                  </div>
-                  <div className="flex justify-center gap-3">
-                  <FaStar className="text-3xl text-amber-400 " /> 
-                  <h1 className="font-bold  text-2xl">4.9</h1>
-                  </div>
-                </div>
-                </div>
-                 <div className="flex justify-center mt-4 mx-11 my-11">
-                  <h1>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum porro dolorum possimus dicta impedit dignissimos laudantium perferendis recusandae quia asperiores fuga in, voluptate illum dolor dolorem ut dolores! Nemo, nobis?
-                  </h1>
-                 </div>
-                 <Link to="/booking">
-                 <button className="bg-indigo-600 p-4 w-[340px] rounded-br-[3rem] text-2xl text-slate-50  text-white hover:bg-indigo-800 ">
-                  Book Now
-                 </button>
-                 </Link>
-             </div>
-
-
-           </div>
-       {/* Card & icons Closing dev    */}
-
+            <p className="px-4 mt-4 text-sm text-slate-600">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum porro dolorum possimus dicta impedit dignissimos laudantium perferendis recusandae quia asperiores fuga.
+            </p>
+            <Link to="/booking">
+              <button className="mt-6 w-full bg-indigo-600 text-white text-xl font-semibold p-4 rounded-br-[3rem] hover:bg-indigo-800">
+                Book Now
+              </button>
+            </Link>
+          </div>
+        ))}
+      </div>
     </div>
-  )
+  );
 }
 
-export default Card
+export default Card;
